@@ -8,3 +8,9 @@ app.use(express.json());
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
+
+const { Sequelize } = require("sequelize");
+const sequelize = new Sequelize({
+  dialect: "sqlite",
+  storage: "database.sqlite",
+});
